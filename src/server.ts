@@ -15,7 +15,9 @@ import passport from 'passport';
 import swaggerJSDoc from 'swagger-jsdoc';
 import swaggerUi from 'swagger-ui-express';
 import session from 'express-session';
+import http from 'http';
 import https from 'https';
+import redirectHttps from 'redirect-https';
 import path from 'path';
 
 import { NODE_ENV, MONGODB_URI, SESSION_SECRET, PORT } from './config/secret';
@@ -123,6 +125,7 @@ class Server {
                 console.log(`  App is running at http://localhost:${PORT}`);
                 console.log('  Press CTRL-C to stop\n');
               });
+            http.createServer(lex.middleware(redirectHttps)).listen(80);
         } else {
             this.app.listen(PORT, () => {
                 console.log(`  App is running at http://localhost:${PORT}`);
