@@ -66,7 +66,7 @@ const careerRouter = new CareerRouter();
  *         in: path
  *         description: 조회할 경력사항 번호
  *         required: true
- *         type: integer
+ *         type: string
  *     responses:
  *       200:
  *         description: 조회 성공

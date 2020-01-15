@@ -211,7 +211,7 @@ const postRouter = new PostRouter();
  *         in: path
  *         description: 게시물 고유 index (primary key)
  *         required: true
- *         type: integer
+ *         type: string
  *     responses:
  *       200:
  *         description: 조회 성공

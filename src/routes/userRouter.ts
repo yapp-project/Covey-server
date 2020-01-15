@@ -95,7 +95,7 @@ const userRouter = new UserRouter();
  *         in: path
  *         description: 게시물 번호
  *         required: true
- *         type: integer
+ *         type: string
  *     responses:
  *       200:
  *         description: 게시자의 조회 성공
