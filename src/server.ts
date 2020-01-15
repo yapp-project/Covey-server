@@ -96,7 +96,7 @@ class Server {
         } else {
             this.app.use(morgan('dev'));
         }
-        this.app.use('/img', express.static(path.join(__dirname, 'uploads')));
+        this.app.use('/img', express.static('uploads'));
         this.app.use(express.json());
         this.app.use(express.static('public'));
         this.app.use(express.urlencoded({extended: false}));
