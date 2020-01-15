@@ -72,7 +72,7 @@ export const findSameAddressPost = async (req: Request, res: Response, next: Nex
         // address1: loginUser.address1,
         // address2: loginUser.address2,
         address1: '서울특별시',
-        address2: '종로구',
+        address2: '중랑구',
         isDue: false,
     };
     const paginateOptions: PaginateOptions = {
