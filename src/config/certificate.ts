@@ -8,7 +8,7 @@ export const lex = greenlock.create({
     store: greenlockStore,
     approveDomains: (opts: any, certs: any, cb: any) => {
         if (certs) {
-            opts.domains = ['coveyy.ml', 'www.coveyy.ml'];
+            opts.domains = ['covey.kr', 'www.covey.kr'];
         } else {
             opts.email = 'wowo0201@gmail.com';
             opts.agreeTos = true;
