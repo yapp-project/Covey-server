@@ -18,7 +18,6 @@ import session from 'express-session';
 import http from 'http';
 import https from 'https';
 import redirectHttps from 'redirect-https';
-import path from 'path';
 
 import { NODE_ENV, MONGODB_URI, SESSION_SECRET, PORT } from './config/secret';
 import { passportConfig } from './passport';
