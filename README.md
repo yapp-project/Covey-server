@@ -16,4 +16,4 @@ $ npm start
 - MongoDB
 
 ## swagger 문서
-- https://www.coveyy.ml/api-docs
+- https://www.covey.kr/api-docs
