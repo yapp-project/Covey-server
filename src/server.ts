@@ -121,7 +121,7 @@ class Server {
         this.app.use(errorHandler());
         if(NODE_ENV === 'production') {
             https.createServer(lex.httpsOptions, lex.middleware(this.app)).listen(PORT, () => {
-                console.log(`  App is running at http://localhost:${PORT}`);
+                console.log(`  App is running at https://www.covey.kr:${PORT}`);
                 console.log('  Press CTRL-C to stop\n');
               });
             http.createServer(lex.middleware(redirectHttps)).listen(80);
