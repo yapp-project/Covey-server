@@ -209,7 +209,7 @@ const postRouter = new PostRouter();
  *     parameters:
  *       - name: postId
  *         in: path
- *         description: 게시물 고유 index (primary key)
+ *         description: 게시물 _id
  *         required: true
  *         type: string
  *     responses:
@@ -226,9 +226,9 @@ const postRouter = new PostRouter();
  *     parameters:
  *       - name: postId
  *         in: path
- *         description: 게시물 번호
+ *         description: 게시물 _id
  *         required: true
- *         type: integer
+ *         type: string
  *       - name: body
  *         in: body
  *         description: |
@@ -259,9 +259,9 @@ const postRouter = new PostRouter();
  *     parameters:
  *       - name: postId
  *         in: path
- *         description: 게시물 번호
+ *         description: 게시물 _id
  *         required: true
- *         type: integer
+ *         type: string
  *     responses:
  *       204:
  *         description: 삭제 성공
@@ -319,9 +319,9 @@ const postRouter = new PostRouter();
  *     parameters:
  *       - name: postId
  *         in: path
- *         description: 게시물 번호
+ *         description: 게시물 _id
  *         required: true
- *         type: integer
+ *         type: string
  *     responses:
  *       201:
  *         description: 마감 성공

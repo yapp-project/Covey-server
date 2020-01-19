@@ -83,7 +83,7 @@ const careerRouter = new CareerRouter();
  *         in: path
  *         description: 수정할 경력사항 번호
  *         required: true
- *         type: integer
+ *         type: string
  *       - name: body
  *         in: body
  *         description: |
@@ -112,7 +112,7 @@ const careerRouter = new CareerRouter();
  *         in: path
  *         description: 삭제할 경력사항 번호
  *         required: true
- *         type: integer
+ *         type: string
  *     responses:
  *       204:
  *         description: 삭제 성공

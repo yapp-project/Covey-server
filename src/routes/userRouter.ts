@@ -93,7 +93,7 @@ const userRouter = new UserRouter();
  *     parameters:
  *       - name: postId
  *         in: path
- *         description: 게시물 번호
+ *         description: 게시물 _id
  *         required: true
  *         type: string
  *     responses:
@@ -113,9 +113,9 @@ const userRouter = new UserRouter();
  *     parameters:
  *       - name: userId
  *         in: path
- *         description: 사용자 번호
+ *         description: 사용자 _id
  *         required: true
- *         type: integer
+ *         type: string
  *     responses:
  *       200:
  *         description: 조회 성공

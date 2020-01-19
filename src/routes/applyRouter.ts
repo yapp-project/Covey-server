@@ -39,9 +39,9 @@ const applyRouter = new ApplyRouter();
  *     parameters:
  *       - name: postId
  *         in: path
- *         description: 지원할 게시물 번호
+ *         description: 지원할 게시물 _id
  *         required: true
- *         type: integer
+ *         type: stirng
  *     responses:
  *       201:
  *         description: 지원 성공
@@ -58,9 +58,9 @@ const applyRouter = new ApplyRouter();
  *     parameters:
  *       - name: postId
  *         in: path
- *         description: 지원 취소할 게시물 번호
+ *         description: 지원 취소할 게시물 _id
  *         required: true
- *         type: integer
+ *         type: string
  *     responses:
  *       204:
  *         description: 삭제 성공
