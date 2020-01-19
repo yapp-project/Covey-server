@@ -24,8 +24,8 @@ class AuthRouter {
                             passport.authenticate('facebook', {failureRedirect:'/api/auth/facebook'}), 
                             (req, res) => { res.status(201).json(req.user); });
         this.router.get('/logout', isLoggedIn, logout);
-        this.router.post('/phone', isLoggedIn, sendCodeToPhone);
-        this.router.post('/verify', isLoggedIn, verifyCode);
+        this.router.post('/phone', sendCodeToPhone);
+        this.router.post('/verify', verifyCode);
     }
 }
 
