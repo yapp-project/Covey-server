@@ -4,7 +4,7 @@ import cookieParser from 'cookie-parser';
 import compression from 'compression';
 import cors from 'cors';
 import errorHandler from 'errorhandler';
-import express, { Application } from 'express';
+import express, { Application, Request, Response } from 'express';
 import flash from 'express-flash';
 import helmet from 'helmet';
 import hpp from 'hpp';
@@ -16,7 +16,7 @@ import swaggerJSDoc from 'swagger-jsdoc';
 import swaggerUi from 'swagger-ui-express';
 import session from 'express-session';
 
-import { NODE_ENV, MONGODB_URI, SESSION_SECRET, PORT } from './config/secret';
+import { NODE_ENV, MONGODB_URI, SESSION_SECRET } from './config/secret';
 import { passportConfig } from './passport';
 import { swaggerOptions } from './config/swagger';
 import authRouter from './routes/authRouter';
@@ -117,6 +117,9 @@ class Server {
         this.app.use(errorHandler());
         this.app.listen(3000, () => {
             console.log('####### App is running!! #######');
+        });
+        this.app.get('/health', (req: Request, res: Response) => {
+            res.status(200).send();
         });
     }
 }
