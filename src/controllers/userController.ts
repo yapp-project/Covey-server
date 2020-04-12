@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
-import { query, validationResult } from 'express-validator';
+import { body, validationResult } from 'express-validator';
 
 import { User, UserDocument } from '../models/User';
 import { Career } from '../models/Career';
@@ -95,8 +95,8 @@ export const modifyUser = async (req: Request, res: Response, next: NextFunction
     const { name, gender, age, address1, address2, intro } = req.body;
     let img;
     try {
-        await query(['name', 'age', 'address1', 'address2', 'intro'], 'this is not String type').isString().run(req);
-        await query('gender', 'this is not Boolean type').isBoolean().run(req);
+        await body(['name', 'age', 'address1', 'address2', 'intro'], 'this is not String type').isString().run(req);
+        await body('gender', 'this is not Boolean type').isBoolean().run(req);
 
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
