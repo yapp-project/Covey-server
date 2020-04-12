@@ -15,13 +15,9 @@ import passport from 'passport';
 import swaggerJSDoc from 'swagger-jsdoc';
 import swaggerUi from 'swagger-ui-express';
 import session from 'express-session';
-import http from 'http';
-import https from 'https';
-import redirectHttps from 'redirect-https';
 
 import { NODE_ENV, MONGODB_URI, SESSION_SECRET, PORT } from './config/secret';
 import { passportConfig } from './passport';
-import { lex } from './config/certificate';
 import { swaggerOptions } from './config/swagger';
 import authRouter from './routes/authRouter';
 import userRouter from './routes/userRouter';
@@ -119,18 +115,9 @@ class Server {
     // 서버 구동
     public start(): void {
         this.app.use(errorHandler());
-        if(NODE_ENV === 'production') {
-            https.createServer(lex.httpsOptions, lex.middleware(this.app)).listen(PORT, () => {
-                console.log(`  App is running at https://www.covey.kr:${PORT}`);
-                console.log('  Press CTRL-C to stop\n');
-              });
-            http.createServer(lex.middleware(redirectHttps)).listen(80);
-        } else {
-            this.app.listen(PORT, () => {
-                console.log(`  App is running at http://localhost:${PORT}`);
-                console.log('  Press CTRL-C to stop\n');
-            });
-        }
+        this.app.listen(3000, () => {
+            console.log('####### App is running!! #######');
+        });
     }
 }
 
