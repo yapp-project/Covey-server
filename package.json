@@ -7,7 +7,7 @@
         "start": "npm run build && npm run serve",
         "dev": "cross-env NODE_ENV=development nodemon src/server.ts",
         "build": "tsc -p .",
-        "serve": "cross-env NODE_ENV=production node dist/server.js",
+        "serve": "cross-env NODE_ENV=development node dist/server.js",
         "seedCareers": "ts-node src/seeders/seedCareers.ts",
         "seedPosts": "ts-node src/seeders/seedPosts.ts"
     },
@@ -25,8 +25,6 @@
         "express-flash": "0.0.2",
         "express-session": "^1.17.0",
         "express-validator": "^6.3.1",
-        "greenlock-express": "^2.7.9",
-        "greenlock-store-fs": "^3.2.2",
         "helmet": "^3.21.2",
         "hpp": "^0.2.2",
         "install": "^0.13.0",
