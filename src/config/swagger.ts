@@ -11,7 +11,7 @@ export const swaggerOptions: SwaggerOptions = {
         },
         // 주소
         // host: 'localhost:3000',
-        host: 'www.covey.kr',
+        host: 'covey.kr',
         components: {
             res: {
                 BadRequest: {
