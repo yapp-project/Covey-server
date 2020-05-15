@@ -34,5 +34,5 @@ $ nohup npm start &
 - MongoDB
 
 ## swagger 문서
-- https://www.covey.kr/api-docs
+- https://covey.kr/api-docs/
 
